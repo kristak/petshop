@@ -10,7 +10,7 @@ use App\Controller\AppController;
  */
 class PetsController extends AppController
 {
-    var $components = array('Flash');
+    //var $components = array('Flash');
     /**
      * Index method
      *

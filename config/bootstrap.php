@@ -225,6 +225,4 @@ Plugin::load('Crud');
 
 Plugin::load('ADmad/JwtAuth');
 
-Plugin::load('Crud');
 
-Plugin::load('Crud');

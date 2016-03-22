@@ -24,9 +24,9 @@ class UsersController extends AppController
                     [
                         'sub' => $event->subject->entity->id,
                         'exp' =>  time() + 604800
-
                     ],
-                Security::salt())
+                Security::salt()
+                )
             ]);
             $this->Crud->action()->config('serialize.data', 'data');
         }

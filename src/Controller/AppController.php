@@ -18,10 +18,14 @@ use Cake\Controller\Controller;
 
 class AppController extends Controller
 {
- use \Crud\Controller\ControllerTrait;
+    use \Crud\Controller\ControllerTrait;
 
-    public $components = [
-        'Crud.Crud' => [
+    public function initialize()
+    {
+        parent::initialize();
+
+        $this->loadComponent('Flash');
+        $this->loadComponent('Crud.Crud', [
             'actions' => [
                 'Crud.Index',
                 'Crud.View',
@@ -29,7 +33,7 @@ class AppController extends Controller
                 'Crud.Edit',
                 'Crud.Delete'
             ]
-        ],
-        'Flash'
-    ];
+        ]);
+
+    }
 }
