@@ -53,4 +53,5 @@ class UsersController extends AppController
         '_serialize' => ['success', 'data']
     ]);
     }
+    
 }
