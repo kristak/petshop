@@ -30,8 +30,14 @@ class UsersController extends AppController
             ]);
             $this->Crud->action()->config('serialize.data', 'data');
         }
+
+        $this->Flash->success(__('You have successfully registered.'));
+        return $this->redirect('/api/users/register');
     });
+
     return $this->Crud->execute();
+
+
 	}
 
     public function token()
@@ -53,5 +59,6 @@ class UsersController extends AppController
         '_serialize' => ['success', 'data']
     ]);
     }
+
     
 }
