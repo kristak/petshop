@@ -30,7 +30,7 @@ class UsersController extends AppController
             ]);
             $this->Crud->action()->config('serialize.data', 'data');
         }
-        
+            $this->redirect('/api/users/register');
     });
 
     return $this->Crud->execute();
